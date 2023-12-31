@@ -19,7 +19,7 @@ object DisableAdsPatch : BytecodePatch(
     override fun execute(context: BytecodeContext) = GetShowFingerprint.result?.mutableMethod?.replaceInstructions(
         0,
         """
-            const/4 v0, 0x1
+            const/4 v0, 1
             return v0
         """
     ) ?: throw GetShowFingerprint.exception
