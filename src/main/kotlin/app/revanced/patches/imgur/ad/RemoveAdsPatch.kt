@@ -16,10 +16,9 @@ object AlwaysFalseForGetShowPatch : BytecodePatch(
     setOf(GetShowFingerprint)
 ) {
     override fun execute(context: BytecodeContext) {
-        val result = GetShowFingerprint.result
-            ?: throw PatchException("GetShowFingerprint not found")
+        val result = GetShowFingerprint.result!!.mutableMethod
 
-        result.mutableMethod.replaceInstructions(
+        result.replaceInstructions(
             0,
             """
                 const/4 v0, 0x0 // Always return false
