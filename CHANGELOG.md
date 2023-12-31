@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.2...v3.1.3) (2023-12-31)
+
+
+### Bug Fixes
+
+* **asdasd:** Fix oopsie ([3b7fc4c](https://github.com/BitesizedLion/revanced-patches/commit/3b7fc4c460c47da8248c41be8429919912786ee3))
+
 ## [3.1.2](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.1...v3.1.2) (2023-12-31)
 
 
