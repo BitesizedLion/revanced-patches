@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.0...v3.1.1) (2023-12-31)
+
+
+### Bug Fixes
+
+* **sadasd:** Fix just work ([0735e41](https://github.com/BitesizedLion/revanced-patches/commit/0735e416635afaf87d39c459cb2636d1f420f39d))
+
 # [3.2.0](https://github.com/ReVanced/revanced-patches/compare/v3.1.0...v3.2.0) (2023-12-28)
 
 
