@@ -1,4 +1,4 @@
-package app.revanced.patches.irplus.ad.fingerprints
+package app.revanced.patches.imgur.ad.fingerprints
 
 import app.revanced.patcher.extensions.or
 import app.revanced.patcher.fingerprint.MethodFingerprint
