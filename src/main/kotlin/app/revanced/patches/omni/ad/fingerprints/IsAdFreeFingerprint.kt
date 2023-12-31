@@ -4,6 +4,6 @@ import app.revanced.patcher.fingerprint.MethodFingerprint
 
 internal object IsAdFreeFingerprint : MethodFingerprint(
     customFingerprint = { methodDef, _ ->
-        methodDef.definingClass.endsWith("fix(asdf): i cba;") && methodDef.name == "isAdFree"
+        methodDef.definingClass.endsWith("PremiumStatus;") && methodDef.name == "isAdFree"
     }
 )
