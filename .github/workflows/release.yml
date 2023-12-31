@@ -45,4 +45,5 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.REPOSITORY_PUSH_ACCESS }}
+          ARG_MAX: 232352378354
         run: npm exec semantic-release
