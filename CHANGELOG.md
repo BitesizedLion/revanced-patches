@@ -1,3 +1,10 @@
+## [3.1.4](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.3...v3.1.4) (2023-12-31)
+
+
+### Bug Fixes
+
+* **dsasdasd:** Fix asdasd ([31eba0c](https://github.com/BitesizedLion/revanced-patches/commit/31eba0c705f5ba1f9f75c067fc0af57e4c58a85a))
+
 ## [3.1.3](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.2...v3.1.3) (2023-12-31)
 
 
