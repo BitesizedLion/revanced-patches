@@ -4,6 +4,6 @@ import app.revanced.patcher.fingerprint.MethodFingerprint
 
 internal object GetPremiumFingerprint : MethodFingerprint(
     customFingerprint = { methodDef, _ ->
-        methodDef.definingClass.endsWith("VerifyPremium;") && methodDef.name == "getPremium"
+        methodDef.definingClass.endsWith("AuthToken;") && methodDef.name == "isAdFree"
     }
 )
