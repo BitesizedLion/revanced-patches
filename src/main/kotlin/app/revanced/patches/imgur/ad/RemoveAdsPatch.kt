@@ -1,29 +1,26 @@
 package app.revanced.patches.imgur.ad
 
+import app.revanced.util.exception
 import app.revanced.patcher.data.BytecodeContext
-import app.revanced.patcher.extensions.InstructionExtensions.addInstruction
+import app.revanced.patcher.extensions.InstructionExtensions.replaceInstructions
 import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.imgur.ad.fingerprints.GetShowFingerprint
 
 @Patch(
-    name = "Always False for getShow",
-    description = "Patch to always return false for getShow",
+    name = "Disable ads",
     compatiblePackages = [CompatiblePackage("com.imgur.mobile")]
 )
-object AlwaysFalseForGetShowPatch : BytecodePatch(
+@Suppress("unused")
+object DisableAdsPatch : BytecodePatch(
     setOf(GetShowFingerprint)
 ) {
-    override fun execute(context: BytecodeContext) {
-        val result = GetShowFingerprint.result!!.mutableMethod
-
-        result.replaceInstructions(
-            0,
-            """
-                const/4 v0, 0x0 // Always return false
-                return v0
-            """
-        )
-    }
+    override fun execute(context: BytecodeContext) = GetShowFingerprint.result?.mutableMethod?.replaceInstructions(
+        0,
+        """
+            const/4 v0, 0x1
+            return v0
+        """
+    ) ?: throw GetShowFingerprint.exception
 }
