@@ -1026,6 +1026,12 @@ public abstract class app/revanced/patches/twitter/misc/hook/patch/BaseHookPatch
 	public synthetic fun execute (Lapp/revanced/patcher/data/Context;)V
 }
 
+public final class app/revanced/patches/imgur/ad/DisableAdsPatch : app/revanced/patcher/patch/BytecodePatch {
+	public static final field INSTANCE Lapp/revanced/patches/imgur/ad/DisableAdsPatch;
+	public fun execute (Lapp/revanced/patcher/data/BytecodeContext;)V
+	public synthetic fun execute (Lapp/revanced/patcher/data/Context;)V
+}
+
 public final class app/revanced/patches/twitter/misc/hook/patch/ads/HideAdsPatch : app/revanced/patches/twitter/misc/hook/patch/BaseHookPatchPatch {
 	public static final field INSTANCE Lapp/revanced/patches/twitter/misc/hook/patch/ads/HideAdsPatch;
 }
