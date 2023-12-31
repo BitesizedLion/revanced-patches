@@ -4,6 +4,6 @@ import app.revanced.patcher.fingerprint.MethodFingerprint
 
 internal object GetShowFingerprint : MethodFingerprint(
     customFingerprint = { methodDef, _ ->
-        methodDef.definingClass.endsWith("AdsEligibility;") && methodDef.name == "getShow"
+        methodDef.definingClass.endsWith("AdsFeatureFlags;") && methodDef.name == "isUserSubscribedToNoAds"
     }
 )
