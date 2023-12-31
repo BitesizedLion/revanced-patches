@@ -10,7 +10,7 @@ import app.revanced.patches.candylinkvpn.fingerprints.IsPremiumPurchasedFingerpr
 
 @Patch(
     name = "x pro",
-    compatiblePackages = [CompatiblePackage("com.x.asdasdasdasd")]
+    compatiblePackages = [CompatiblePackage("com.x.x")]
 )
 @Suppress("unused")
 object UnlockProPatch : BytecodePatch(
