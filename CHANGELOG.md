@@ -1,3 +1,10 @@
+## [3.1.11](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.10...v3.1.11) (2023-12-31)
+
+
+### Bug Fixes
+
+* **asdf:** i cba ([83fa9b3](https://github.com/BitesizedLion/revanced-patches/commit/83fa9b3c42fc974983c28fef3a4ce212e815ae42))
+
 ## [3.1.10](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.9...v3.1.10) (2023-12-31)
 
 
