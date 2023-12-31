@@ -27,14 +27,6 @@ object DisableAdsPatch : BytecodePatch(
             """
         ) ?: throw GetPremiumFingerprint.exception
 
-        IsPremiumFingerprint.result?.mutableMethod?.replaceInstructions(
-            0,
-            """
-                const/4 v0, 1
-                return v0
-            """
-        ) ?: throw IsPremiumFingerprint.exception
-
         IsAdFreeFingerprint.result?.mutableMethod?.replaceInstructions(
             0,
             """
