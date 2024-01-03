@@ -363,6 +363,10 @@ public final class app/revanced/patches/omni/ad/DisableAdsPatch : app/revanced/p
 	public synthetic fun execute (Lapp/revanced/patcher/data/Context;)V
 }
 
+public final class app/revanced/patches/omni/ad/fingerprints/LinkFingerprint : app/revanced/patcher/fingerprint/MethodFingerprint {
+	public static final field INSTANCE Lapp/revanced/patches/omni/ad/fingerprints/LinkFingerprint;
+}
+
 public final class app/revanced/patches/photomath/detection/deviceid/SpoofDeviceIdPatch : app/revanced/patcher/patch/BytecodePatch {
 	public static final field INSTANCE Lapp/revanced/patches/photomath/detection/deviceid/SpoofDeviceIdPatch;
 	public fun execute (Lapp/revanced/patcher/data/BytecodeContext;)V
