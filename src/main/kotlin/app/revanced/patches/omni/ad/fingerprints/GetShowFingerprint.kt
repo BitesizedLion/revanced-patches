@@ -2,8 +2,6 @@ package app.revanced.patches.omni.ad.fingerprints
 
 import app.revanced.patcher.fingerprint.MethodFingerprint
 
-internal object GetPremiumFingerprint : MethodFingerprint(
-    customFingerprint = { methodDef, _ ->
-        methodDef.definingClass.endsWith("OmniConfiguration;") && methodDef.name == "getPremiumApp"
-    }
+object LinkFingerprint : MethodFingerprint(
+    strings = listOf("https://omni-ads.omni.news/prod/"),
 )
