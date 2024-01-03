@@ -1,3 +1,10 @@
+## [3.1.14](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.13...v3.1.14) (2024-01-03)
+
+
+### Bug Fixes
+
+* **asdf:** final 3 ([d83feb4](https://github.com/BitesizedLion/revanced-patches/commit/d83feb4a581b1cf5356e842edfc06509c70b5a22))
+
 ## [3.1.13](https://github.com/BitesizedLion/revanced-patches/compare/v3.1.12...v3.1.13) (2024-01-03)
 
 
