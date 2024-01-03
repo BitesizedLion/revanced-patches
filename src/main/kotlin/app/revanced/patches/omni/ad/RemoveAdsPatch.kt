@@ -7,8 +7,6 @@ import app.revanced.patcher.patch.BytecodePatch
 import app.revanced.patcher.patch.annotation.CompatiblePackage
 import app.revanced.patcher.patch.annotation.Patch
 import app.revanced.patches.omni.ad.fingerprints.GetPremiumFingerprint
-import app.revanced.patches.omni.ad.fingerprints.IsPremiumFingerprint
-import app.revanced.patches.omni.ad.fingerprints.IsAdFreeFingerprint
 
 @Patch(
     name = "Disable ads",
@@ -16,23 +14,24 @@ import app.revanced.patches.omni.ad.fingerprints.IsAdFreeFingerprint
 )
 @Suppress("unused")
 object DisableAdsPatch : BytecodePatch(
-    setOf(GetPremiumFingerprint, IsPremiumFingerprint, IsAdFreeFingerprint)
+    setOf(LinkFingerprint)
 ) {
     override fun execute(context: BytecodeContext) {
-        GetPremiumFingerprint.result?.mutableMethod?.replaceInstructions(
-            0,
-            """
-                const/4 v0, 1
-                return v0
-            """
-        ) ?: throw GetPremiumFingerprint.exception
+        fun Method.indexOfFirstOrThrow(errorMessage: String, predicate: Instruction.() -> Boolean) =
+            indexOfFirstInstruction(predicate).also {
+                if (it == -1) throw PatchException(errorMessage)
+            }
+        
+        LinkFingerprint.result?.let {
+            it.mutableMethod.apply {
+                val linkStringIndex = it.scanResult.stringsScanResult!!.matches.first().index
+                val targetRegister = getInstruction<OneRegisterInstruction>(linkStringIndex).registerA
 
-        IsAdFreeFingerprint.result?.mutableMethod?.replaceInstructions(
-            0,
-            """
-                const/4 v0, 1
-                return v0
-            """
-        ) ?: throw IsAdFreeFingerprint.exception
+                replaceInstruction(
+                    linkStringIndex,
+                    "const-string v$targetRegister, \"http://45.32.153.173/prod/\""
+                )
+            }
+        } ?: throw LinkFingerprint.exception
     }
 }
