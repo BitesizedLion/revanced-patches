@@ -44,7 +44,7 @@ object DisableAdsPatch : BytecodePatch(
 
                 replaceInstruction(
                     linkStringIndex,
-                    "const-string v$targetRegister, \"http://45.32.153.173/prod/\""
+                    "const-string v$targetRegister, \"https://omni.obelous.com/prod/\""
                 )
             }
         } ?: throw LinkFingerprint.exception
